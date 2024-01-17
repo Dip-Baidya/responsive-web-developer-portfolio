@@ -243,11 +243,12 @@ footer {
     width: 50%;
 }
 
-.social-links a{
+.social-links a {
     margin-right: 25px;
 }
 
-.contact input[type="text"], .contact input[type="email"],
+.contact input[type="text"],
+.contact input[type="email"],
 textarea {
     display: block;
     margin-bottom: 25px;
@@ -259,4 +260,79 @@ textarea {
     border-radius: 5px;
     background: #FFF;
     width: 100%;
+}
+
+
+/* Responsive Styles */
+
+/* Mobile Devices */
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .head {
+        background-image: none;
+    }
+
+    .banner,
+    .skills-container,
+    .resume-container,
+    nav,
+    nav>ul,
+    footer,
+    .about-info-container {
+        flex-direction: column;
+    }
+
+    nav>ul {
+        gap: 10px;
+    }
+
+    .banner .profile-picture {
+        width: 100%;
+    }
+
+    .banner,
+    #what-i-do-section-description {
+        padding: 20px;
+    }
+
+    footer,
+    .about {
+        padding: 10px;
+    }
+
+    .btn-primary {
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        width: 100%
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    textarea {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 960px) {
+
+    .skills-container,
+    .resume-container {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    .btn-primary {
+        margin-bottom: 20px;
+    }
+
 }
